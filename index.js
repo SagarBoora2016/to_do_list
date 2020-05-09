@@ -2,7 +2,6 @@
 const express = require("express");
 const app = express();
 const port = 8000;
-
 app.use(express.urlencoded());
 const db= require("./config/mongoose");
 const Task = require("./models/task");
@@ -30,20 +29,23 @@ app.get("/",function(req,res){
     });
     // return res.render("home");
 });
-app.get("/getInDatabase",function(req,res){
-    console.log("Done");
+app.post("/getInDatabase",function(req,res){
+    // console.log(req.body);
+    // console.log(req.body.description);
+    // console.log(req.body.date);
+    
     Task.create({
-        description:"Sagar",
-        type_of_work:"Sagar",
-        date_of_work:"Sahar"
+        description:req.body.description,
+        type_of_work:req.body.work,
+        date_of_work:req.body.date
 
     },function(err,newData){
         if(err){
-            console.log("error");
+            console.log(err);
             return;
         }
-        console.log("New Data");
-        res.redirect("/");
+        // console.log("New Data");
+        return res.redirect("/");
     });
-    return res.redirect("/");
+    // return res.redirect("/");
 });

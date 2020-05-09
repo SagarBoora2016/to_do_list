@@ -14,7 +14,7 @@
                 </div>
             
                 <div>
-                    <form action="getInDatabase" method="get">
+                    <form action="/getInDatabase" method="POST">
                         <div class="my-to-do-desc">
                             <div class="my-to-do-desc-input border-btm">
                                 <label for="your-text">Description</label>
@@ -51,13 +51,15 @@
                     </form>
                 </div>
                 <div class="task">
-                    <!-- <%for(i of tasks_list){
+                    <%for(i of tasks_list){
                     %>
 
                     <p>    <%=i.description %></p>
+                    <p>    <%=i.type_of_work %></p>
+                    <p>    <%=i.date_of_work %></p>
                     <%
                     } 
-                    %> -->
+                    %>
                 </div>
             </div>
             

@@ -9,7 +9,7 @@ const to_do_schema = mongoose.Schema({
         required:true
     },
     date_of_work:{
-        type:String,
+        type:Date,
         required:true
     }
 });
