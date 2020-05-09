@@ -1,0 +1,162 @@
+body{
+    height: 98vh;
+    width: 98vw;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+#container{
+    width: 70%;
+    background-color: rgb(128,128,128);
+    height: 80%;
+    display: flex;
+    align-items: center;
+    
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.my-to-do{
+    height: auto;
+    width: 70%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: rgb(255,255,255);
+}
+.my-to-do-text{
+    /* width: 100%; */
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.4rem;
+}
+.border-btm{
+    border-bottom: 2px solid black;
+}
+
+.my-to-do-desc:hover{
+    background-color: lightblue;
+}
+.my-to-do-desc-input{
+    padding-left: 15px;
+    font-size: 1rem;
+}
+.my-to-do-desc-input input{
+    width: 100%;
+    margin-top: 4px;
+    border:none;
+    height: 2rem;
+    margin-bottom: 4px;
+    background: transparent;
+    font-size: 1rem;
+    outline: none;
+}
+
+
+.my-to-do-select{
+    height: auto;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    height:auto;
+}
+
+.my-to-do-drop-down{
+    width: 50%;
+    /* border-right: 1px solid black; */
+    height: 100%;
+    height: 100%;
+    border-right: 1px solid black;
+    /* background-color: red; */
+}
+.my-to-do-drop-down:hover{
+    background-color: lightblue;
+}
+.my-to-do-drop-down label{
+    font-size: 0.9rem;
+    padding-left: 10px;
+}
+.my-to-do-drop-down select{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    background: transparent;
+    border: none;
+    width: 80%;
+    font-size: 0.9rem;
+    outline: none;
+}
+.my-to-do-drop-down select {
+    background: transparent;
+    outline: none;
+}
+.my-to-do-calendar{
+    width: 50%;
+}
+.my-to-do-calendar:hover{
+    background-color: lightblue;
+}
+.my-to-do-calendar label{
+    font-size: 0.9rem;
+    padding-left: 10px;
+}
+.my-to-do-calendar input{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    outline: none;
+    font-size: 0.9rem;
+    width: 80%;
+    border:none;
+    background: transparent;
+    padding-left: 12px;
+}
+.my-to-do-btn{
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.my-to-do-btn1{
+    padding:8px 16px 8px 16px;
+    background-color: grey;
+}
+.my-to-do-btn1 i{
+    font-size: 1rem;
+    color: white;
+}
+.my-to-do-btn1 span{
+    margin-left:6px;
+    font-size: 1rem;
+    background-color:transparent;
+    border: none;
+    color: white;
+}
+
+.my-to-do-btn2{
+    margin-left:6px;
+    padding:8px 16px 8px 16px;
+    background-color: red;
+}
+.my-to-do-btn2 i{
+    font-size: 1rem;
+    color: white;
+}
+.my-to-do-btn2 span{
+    margin-left:6px;
+    font-size: 1rem;
+    background-color:transparent;
+    border: none;
+    color: white;
+}
+.tasks{
+    height: auto;
+    min-height: 500px;
+    overflow-y:scroll;
+}

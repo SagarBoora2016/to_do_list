@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>
+            To Do List
+        </title>
+        <script src="https://kit.fontawesome.com/9ff48b1996.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="css/home.css">
+    </head>
+    <body>
+        <div id="container">
+            <div class="my-to-do">
+                <div class="my-to-do-text border-btm"> 
+                    TODO App
+                </div>
+            
+                <div>
+                    <form action="getInDatabase" method="get">
+                        <div class="my-to-do-desc">
+                            <div class="my-to-do-desc-input border-btm">
+                                <label for="your-text">Description</label>
+                                <input type="text" id="your-text" name="description" placeholder="What do you need to do">
+                            </div>
+                        </div>
+                        <div class="my-to-do-select border-btm">
+                            <div class="my-to-do-drop-down">
+                                <label for="your-work">Category</label>
+                                <br>
+                                <select id="your-work" name="work">
+                                    <option value="">Choose a Category</option>
+                                    <option value="school">School</option>
+                                    <option value="work">Work</option>
+                                    <option value="personal">Personal</option>
+                                </select>
+                            </div>
+                            <div class="my-to-do-calendar">
+                                <label for="calendar">Due Date</label>
+                                <br>
+                                <input type="date" id="calendar" name="date">
+                            </div>
+                        </div>
+                        <div class="my-to-do-btn border-btm">
+                            <button type = "submit" class="my-to-do-btn1">
+                                <i class="fas fa-plus"></i>
+                                <span>Add Task</span>
+                            </button>
+                            <button class="my-to-do-btn2">
+                                <i class="fas fa-trash-alt"></i>
+                                <span>Delete Task</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="task">
+                    Hrllo there
+                </div>
+            </div>
+            
+            
+
+        </div>
+
+        
+    </body>
+    <script 
+        type="text/javascript" src="/js/home.js">
+
+    </script>
+</html>
