@@ -21,10 +21,10 @@
                                 <input type="text" id="your-text" name="description" placeholder="What do you need to do">
                             </div>
                         </div>
-                        <div class="my-to-do-select border-btm">
+                        <div class="my-to-do-select">
                             <div class="my-to-do-drop-down">
                                 <label for="your-work">Category</label>
-                                <br>
+                                
                                 <select id="your-work" name="work">
                                     <option value="">Choose a Category</option>
                                     <option value="school">School</option>
@@ -52,14 +52,33 @@
                 </div>
                 <div class="task">
                     <%for(i of tasks_list){
+                        var date = new Date(i.date_of_work);
                     %>
-
-                    <p>    <%=i.description %></p>
-                    <p>    <%=i.type_of_work %></p>
-                    <p>    <%=i.date_of_work %></p>
-                    <%
+                        <div class="border-btm tasks-items">
+                            <div class="task-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="task-info">
+                                <div class="task-info-desc">
+                                    <%=i.description %>
+                                </div>
+                                <div class="task-info-date">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <%=date.toDateString();
+                                    %>
+                                </div>
+                            </div>
+                            <div class="task-work">
+                                <div>
+                                    <%=i.type_of_work %>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                        <%
                     } 
-                    %>
+                    %> 
+                    
                 </div>
             </div>
             

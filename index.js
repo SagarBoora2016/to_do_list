@@ -30,10 +30,6 @@ app.get("/",function(req,res){
     // return res.render("home");
 });
 app.post("/getInDatabase",function(req,res){
-    // console.log(req.body);
-    // console.log(req.body.description);
-    // console.log(req.body.date);
-    
     Task.create({
         description:req.body.description,
         type_of_work:req.body.work,

@@ -21,10 +21,10 @@ body{
 .my-to-do{
     height: auto;
     width: 70%;
-    height: 80%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    /* overflow: auto; */
     background-color: rgb(255,255,255);
 }
 .my-to-do-text{
@@ -35,6 +35,7 @@ body{
 }
 .border-btm{
     border-bottom: 2px solid black;
+    padding-bottom: 2px;
 }
 
 .my-to-do-desc:hover{
@@ -60,17 +61,15 @@ body{
     height: auto;
     display: flex;
     justify-content:space-around;
-    align-items: center;
-    height:auto;
+    align-items: flex-start;
 }
 
 .my-to-do-drop-down{
+    border:none;
     width: 50%;
-    /* border-right: 1px solid black; */
-    height: 100%;
     height: 100%;
     border-right: 1px solid black;
-    /* background-color: red; */
+    border-bottom: 2px solid black;
 }
 .my-to-do-drop-down:hover{
     background-color: lightblue;
@@ -97,6 +96,7 @@ body{
 }
 .my-to-do-calendar{
     width: 50%;
+    border-bottom: 2px solid black;
 }
 .my-to-do-calendar:hover{
     background-color: lightblue;
@@ -125,7 +125,7 @@ body{
 }
 .my-to-do-btn1{
     padding:8px 16px 8px 16px;
-    background-color: grey;
+    background-color: rgb(68,68,68);
 }
 .my-to-do-btn1 i{
     font-size: 1rem;
@@ -142,7 +142,7 @@ body{
 .my-to-do-btn2{
     margin-left:6px;
     padding:8px 16px 8px 16px;
-    background-color: red;
+    background-color: rgb(238,53,30);
 }
 .my-to-do-btn2 i{
     font-size: 1rem;
@@ -155,8 +155,65 @@ body{
     border: none;
     color: white;
 }
-.tasks{
+.task{
+    margin: 10px 4px 10px 4px;
     height: auto;
-    min-height: 500px;
+    min-height: 200px;
     overflow-y:scroll;
+    flex-direction: row;
+}
+
+.task-checkbox{
+    align-self: center;
+    width: 10%;
+    height: auto;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.task-checkbox input{ 
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.task-info{
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.task-info-desc{
+    margin-bottom: 4px;
+}
+.task-work{
+    /* display: inline-flex; */
+    color: white;
+    width:15%;
+    height:auto;
+    padding:4px 8px 4px 8px;
+}
+.task-work div{
+    height: auto;
+    width: 100%;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width:4rem;
+    height:2rem;
+    background-color: red;
+}
+.margin-btm{
+    padding-bottom: 2px;
+    margin-bottom: 2px;
+}
+.tasks-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding:0px 4px 4px 4px;
+    margin:0px 8px 8px 8px;
 }
