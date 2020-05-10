@@ -18,6 +18,7 @@ app.listen(port,function(err){
 });
 
 app.get("/",function(req,res){
+    console.log("here");
     Task.find({},function(err,tasks){
         if(err){
             console.log("Unable to fetch Data");
@@ -27,7 +28,6 @@ app.get("/",function(req,res){
            tasks_list:tasks 
         });
     });
-    // return res.render("home");
 });
 app.post("/getInDatabase",function(req,res){
     Task.create({
@@ -44,4 +44,21 @@ app.post("/getInDatabase",function(req,res){
         return res.redirect("/");
     });
     // return res.redirect("/");
+});
+
+app.get("/delete-task",function(req,res){
+    console.log("Deleted");
+    var query = req.query;
+    for( i in query){
+        Task.deleteOne({_id:i},function(err){
+            if(err){
+                console.log("Error in deleting from database.");
+                return;
+            }else{
+
+            }
+        });
+        console.log(i);
+    }
+    return res.redirect("/");
 });

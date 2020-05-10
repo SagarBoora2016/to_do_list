@@ -140,6 +140,9 @@ body{
 }
 
 .my-to-do-btn2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left:6px;
     padding:8px 16px 8px 16px;
     background-color: rgb(238,53,30);
@@ -157,8 +160,8 @@ body{
 }
 .task{
     margin: 10px 4px 10px 4px;
-    height: auto;
-    min-height: 200px;
+    /* height: 100px; */
+    height: 100px;
     overflow-y:scroll;
     flex-direction: row;
 }
@@ -201,7 +204,7 @@ body{
     justify-content: center;
     align-items: center;
     display: flex;
-    width:4rem;
+    width:5rem;
     height:2rem;
     background-color: red;
 }

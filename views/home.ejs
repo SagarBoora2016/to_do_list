@@ -43,45 +43,50 @@
                                 <i class="fas fa-plus"></i>
                                 <span>Add Task</span>
                             </button>
-                            <button class="my-to-do-btn2">
-                                <i class="fas fa-trash-alt"></i>
-                                <span>Delete Task</span>
-                            </button>
+                            
                         </div>
                     </form>
                 </div>
-                <div class="task">
-                    <%for(i of tasks_list){
-                        var date = new Date(i.date_of_work);
-                    %>
-                        <div class="border-btm tasks-items">
-                            <div class="task-checkbox">
-                                <input type="checkbox">
-                            </div>
-                            <div class="task-info">
-                                <div class="task-info-desc">
-                                    <%=i.description %>
+                <form method="GET" action="delete-task">
+                    <div class="my-to-do-btn border-btm">
+                        <button class="my-to-do-btn2">
+                            <i class="fas fa-trash-alt"></i>
+                            <span>Delete Task</span>
+                        </button>
+                    </div>
+                        <div class="task">
+                            <%for(i of tasks_list){
+                                var date = new Date(i.date_of_work);
+                            %>
+                                <div class="border-btm tasks-items">
+                                    <div class="task-checkbox">
+                                        <input type="checkbox" name="<%=i._id%>">
+                                    </div>
+                                    <div class="task-info">
+                                        <div class="task-info-desc">
+                                            <%=i.description %>
+                                        </div>
+                                        <div class="task-info-date">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <%=date.toDateString();
+                                            %>
+                                        </div>
+                                    </div>
+                                    <div class="task-work">
+                                        <div>
+                                            <%=i.type_of_work %>
+                                        </div>
+                                    </div>
+                                    <br>
                                 </div>
-                                <div class="task-info-date">
-                                    <i class="far fa-calendar-alt"></i>
-                                    <%=date.toDateString();
-                                    %>
-                                </div>
-                            </div>
-                            <div class="task-work">
-                                <div>
-                                    <%=i.type_of_work %>
-                                </div>
-                            </div>
-                            <br>
+                                <%
+                            } 
+                            %> 
+                            
                         </div>
-                        <%
-                    } 
-                    %> 
-                    
+                    </form>
                 </div>
-            </div>
-            
+                
             
 
         </div>
