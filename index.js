@@ -18,7 +18,6 @@ app.listen(port,function(err){
 });
 
 app.get("/",function(req,res){
-    console.log("here 1");
     
     Task.find({},function(err,tasks){
         if(err){
